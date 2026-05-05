@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo que busco en una pareja — V2</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #e8d5c4;
+      color: #3a2a22;
+      line-height: 1.75;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 56px 44px;
+    }
+
+    /* ── Título principal ── */
+    h1 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #5d2e46;
+      border-bottom: 3px solid #b87d6d;
+      padding-bottom: 14px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      color: #b87d6d;
+      font-size: 1rem;
+      margin-bottom: 48px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Títulos de bloque (100 COSAS, TOP 20, etc.) ── */
+    h2 {
+      font-size: 1.45rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #5d2e46;
+      padding: 13px 22px;
+      border-radius: 7px;
+      margin: 44px 0 26px 0;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Subsecciones ── */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #5d2e46;
+      border-left: 5px solid #d4a5a5;
+      padding-left: 14px;
+      margin: 32px 0 14px 0;
+    }
+
+    /* ── Listas numeradas globales ── */
+    ol {
+      list-style: none;
+      padding-left: 0;
+      counter-reset: item;
+    }
+
+    ol li {
+      counter-increment: item;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 11px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      background-color: rgba(255,255,255,0.28);
+      transition: background 0.15s;
+    }
+
+    ol li:hover {
+      background-color: rgba(255,255,255,0.48);
+    }
+
+    ol li::before {
+      content: counter(item) ".";
+      color: #b87d6d;
+      font-weight: bold;
+      min-width: 30px;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+
+    /* Continuación de numeración por sección */
+    .s16  { counter-reset: item 15; }
+    .s26  { counter-reset: item 25; }
+    .s36  { counter-reset: item 35; }
+    .s46  { counter-reset: item 45; }
+    .s56  { counter-reset: item 55; }
+    .s66  { counter-reset: item 65; }
+    .s76  { counter-reset: item 75; }
+    .s86  { counter-reset: item 85; }
+    .s94  { counter-reset: item 93; }
+
+    strong { color: #5d2e46; }
+
+    /* ── Top 20 ── */
+    .top20 ol li {
+      background-color: rgba(212,165,165,0.22);
+    }
+    .top20 ol li:hover {
+      background-color: rgba(212,165,165,0.42);
+    }
+
+    /* ── No negociables ── */
+    .non-neg {
+      background-color: rgba(255,255,255,0.5);
+      border-left: 6px solid #5d2e46;
+      border-radius: 0 10px 10px 0;
+      padding: 22px 28px;
+      margin-bottom: 22px;
+    }
+
+    .non-neg h3 {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: #5d2e46;
+    }
+
+    .non-neg p {
+      font-size: 0.96rem;
+      margin-bottom: 8px;
+    }
+
+    .como-mido {
+      font-style: italic;
+      color: #7a3a50;
+      background-color: rgba(212,165,165,0.2);
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-size: 0.93rem;
+      margin-top: 10px;
+    }
+
+    /* ── Separador ── */
+    hr {
+      border: none;
+      border-top: 1px solid #c4a090;
+      margin: 42px 0;
+    }
+
+    /* ── Resumen final ── */
+    .summary {
+      background-color: #5d2e46;
+      color: #f0e0d8;
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-top: 44px;
+    }
+
+    .summary h2 {
+      background: none;
+      color: #d4a5a5;
+      padding: 0;
+      margin: 0 0 18px 0;
+      font-size: 1.3rem;
+    }
+
+    .summary p { line-height: 1.9; font-size: 0.97rem; }
+    .summary strong { color: #f5c8b8; }
+
+    /* ── Nota intro del top 20 ── */
+    .nota {
+      color: #7a4a3a;
+      font-size: 0.92rem;
+      font-style: italic;
+      margin-bottom: 20px;
+      padding: 10px 14px;
+      background-color: rgba(255,255,255,0.3);
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Lo que busco en una pareja</h1>
+  <p class="subtitle">100 cosas &nbsp;·&nbsp; 20 más importantes &nbsp;·&nbsp; 5 no negociables</p>
+
+  <!-- ════════════════════════════════════════
+       100 COSAS
+  ════════════════════════════════════════ -->
+  <h2>100 COSAS QUE BUSCO EN UNA PAREJA</h2>
+
+  <h3>1. Personalidad y forma de ser (1–15)</h3>
+  <ol>
+    <li><strong>Amable de raíz</strong> — no solo conmigo: con meseros, choferes, su familia, gente que no le puede devolver el favor.</li>
+    <li><strong>Buen corazón real</strong> — que se note en lo que hace cuando nadie está mirando, no solo en lo que dice.</li>
+    <li><strong>Respetuosa en lo cotidiano</strong> — no se burla de mí frente a otros, no me corrige en público, no usa apodos hirientes "de cariño".</li>
+    <li><strong>Sentido del humor sano</strong> — que riamos juntos, no que el humor sea sarcasmo o burla disfrazada.</li>
+    <li><strong>Paciente</strong> — sobre todo cuando estoy concentrado, cansado o pasando una mala racha.</li>
+    <li><strong>Emocionalmente madura</strong> — sabe que sentir algo y reaccionarlo son cosas distintas.</li>
+    <li><strong>Honesta incluso cuando incomoda</strong> — prefiere decirme algo difícil a tiempo que dejar que se pudra.</li>
+    <li><strong>Leal</strong> — no me expone con sus amigas, no comenta lo íntimo de la relación afuera.</li>
+    <li><strong>Empática de verdad</strong> — entiende que mi cansancio o mi silencio no siempre son contra ella.</li>
+    <li><strong>Tranquila para resolver problemas</strong> — baja el tono en lugar de subirlo cuando hay tensión.</li>
+    <li><strong>No manipuladora</strong> — no usa culpa, lágrimas estratégicas, ni "olvídalo, nada" para conseguir cosas.</li>
+    <li><strong>Sin orgullo tóxico</strong> — puede ceder sin sentir que pierde.</li>
+    <li><strong>Sabe pedir perdón de verdad</strong> — nombra lo que hizo, no solo dice "perdón si te sentiste mal".</li>
+    <li><strong>Acepta sus errores sin victimizarse</strong> — no convierte cada crítica suya en un drama sobre ella.</li>
+    <li><strong>Agradecida</strong> — nota lo que hago, lo nombra, no lo da por hecho.</li>
+  </ol>
+
+  <h3>2. Comunicación (16–25)</h3>
+  <ol class="s16">
+    <li><strong>Habla de lo que siente</strong> sin necesidad de que yo lo adivine.</li>
+    <li><strong>No aplica ley del hielo</strong> — silencios prolongados como castigo son una bandera roja para mí.</li>
+    <li><strong>Escucha de verdad</strong> — no está esperando su turno para hablar ni revisando el celular.</li>
+    <li><strong>No invalida emociones</strong> ("no es para tanto", "estás exagerando", "los hombres no lloran").</li>
+    <li><strong>Puede tocar temas difíciles sin explotar</strong> — dinero, ex, familia, sexo, miedos.</li>
+    <li><strong>No estalla por cosas chicas</strong> — la magnitud de su reacción coincide con el tamaño del problema.</li>
+    <li><strong>Comunica necesidades en directo</strong> — pide lo que quiere sin indirectas ni "tú deberías saberlo".</li>
+    <li><strong>Es clara con lo que quiere de la relación</strong> — no me deja en modo adivino.</li>
+    <li><strong>No usa indirectas crónicas</strong> ni "estados" pasivo-agresivos para mandar mensajes.</li>
+    <li><strong>Sabe negociar</strong> — entiende que no se trata de ganar la discusión sino de resolverla.</li>
+  </ol>
+
+  <h3>3. Valores y visión de vida (26–35)</h3>
+  <ol class="s26">
+    <li><strong>Valora la familia</strong> (la suya, la mía, la que podamos formar).</li>
+    <li><strong>Tiene principios claros</strong> y no los cambia según con quién esté.</li>
+    <li><strong>Responsable con sus compromisos</strong> — chicos y grandes.</li>
+    <li><strong>Tiene metas personales propias</strong> — no espera que mi vida sea la suya.</li>
+    <li><strong>Quiere crecer</strong> — leer, aprender, cuestionarse, mejorar.</li>
+    <li><strong>Tiene visión a futuro</strong> — puede pensar más allá del próximo fin de semana.</li>
+    <li><strong>Trabajadora</strong> — entiende lo que cuesta construir algo.</li>
+    <li><strong>Valora el esfuerzo ajeno</strong> — no menosprecia trabajos, oficios ni etapas iniciales.</li>
+    <li><strong>No conformista</strong> — no se queda donde no es feliz solo por comodidad.</li>
+    <li><strong>Estable en sus decisiones grandes</strong> — no cambia de rumbo radical cada mes.</li>
+  </ol>
+
+  <h3>4. Vida espiritual y fe (36–45)</h3>
+  <ol class="s36">
+    <li><strong>Tiene una vida espiritual activa</strong> — no etiqueta heredada, sino relación real con Dios que se nota en lo cotidiano, no solo en momentos de crisis.</li>
+    <li><strong>Considera a Dios como roca</strong> — en sus decisiones del día a día: cómo trata a otros, cómo perdona, cómo enfrenta lo difícil, cómo actúa cuando nadie la ve.</li>
+    <li><strong>Vive sus valores espirituales de lunes a domingo</strong> — no solo cuando hay emergencia o cuando es conveniente mostrarlo.</li>
+    <li><strong>No usa la fe como arma</strong> — no me juzga con versículos, no me manipula con culpa religiosa, no se siente superior espiritualmente.</li>
+    <li><strong>Respeta el proceso espiritual del otro</strong> — entiende que la fe es un camino vivo, no un examen que se aprueba o reprueba.</li>
+    <li><strong>Tiene principios morales sólidos</strong> sin volverse rígida ni juzgona con los demás.</li>
+    <li><strong>Sabe perdonar de corazón</strong> — no guarda rencor como deporte.</li>
+    <li><strong>Practica la gratitud</strong> como hábito real, no solo en frases bonitas o publicaciones de redes sociales.</li>
+    <li><strong>Se cuestiona, ora, reflexiona</strong> antes de tomar decisiones grandes — la espiritualidad la guía, no la decora.</li>
+    <li><strong>Quiere transmitir esos valores</strong> si llegamos a tener hijos — no como religión forzada, sino como forma de vida desde el ejemplo.</li>
+  </ol>
+
+  <h3>5. Relación conmigo (46–55)</h3>
+  <ol class="s46">
+    <li><strong>Me da paz</strong> — estar con ella baja mi ansiedad, no la sube.</li>
+    <li><strong>Me admira por algo real</strong>, no solo por lo que puedo darle.</li>
+    <li><strong>Apoya mis proyectos</strong> — incluso los que aún no dan dinero.</li>
+    <li><strong>Cree en mi potencial</strong> sin necesidad de pruebas constantes.</li>
+    <li><strong>Respeta mis tiempos de estudio, código y trabajo</strong> — entiende que estar concentrado no es estar ignorándola.</li>
+    <li><strong>No minimiza mis sueños</strong> ni los etiqueta de "imposibles" o "infantiles".</li>
+    <li><strong>No compite conmigo</strong> de forma negativa (logros, atención, dinero, conocimientos).</li>
+    <li><strong>Celebra mis logros</strong> aunque sean chicos.</li>
+    <li><strong>Me motiva a ser mejor</strong> sin presionarme ni compararme.</li>
+    <li><strong>Me hace sentir querido</strong> con hechos cotidianos, no solo en fechas especiales.</li>
+  </ol>
+
+  <h3>6. Compatibilidad emocional (56–65)</h3>
+  <ol class="s56">
+    <li><strong>Forma sana de amar</strong> — sin posesividad, sin chantaje, sin "si me amaras...".</li>
+    <li><strong>No es extremadamente celosa</strong> — confía hasta que haya razón real para no hacerlo.</li>
+    <li><strong>No necesita drama para sentir amor</strong> — la calma no la aburre.</li>
+    <li><strong>Sabe dar espacio</strong> sin tomarlo como rechazo.</li>
+    <li><strong>También busca cercanía activamente</strong> — no soy el único que toma la iniciativa para estar juntos, escribir primero, buscar el contacto físico o abrir el corazón. Si siempre soy yo quien llega, quien llama, quien propone el plan, quien abraza primero — algo está desalineado. La reciprocidad no se negocia ni se pide; cuando existe, se da de forma natural de los dos lados.</li>
+    <li><strong>Estable emocionalmente</strong> — sus subidas y bajadas no me marean ni me obligan a vivir caminando en huevos.</li>
+    <li><strong>No me hace sentir inseguro</strong> todo el tiempo (ni con sus actos, ni con su ambigüedad).</li>
+    <li><strong>Consistente</strong> — la persona que es el lunes es la misma del viernes y la misma del mes 6.</li>
+    <li><strong>Sus acciones coinciden con sus palabras</strong> — no hay dos versiones de ella según quién esté mirando.</li>
+    <li><strong>No juega con mensajes ambiguos ni señales mixtas</strong> — no es la persona que hoy me trata con calor y mañana con frialdad sin explicación. No dice "está bien" cuando no lo está. No da a entender algo y luego niega haberlo dicho. No usa la incertidumbre como mecanismo de poder. Con ella sé dónde estoy parado.</li>
+  </ol>
+
+  <h3>7. Proyecto de vida (66–75)</h3>
+  <ol class="s66">
+    <li><strong>Quiere algo serio</strong> desde el inicio, no "vamos viendo" indefinido.</li>
+    <li><strong>Disposición real para una relación estable</strong> (tiempo, energía, exclusividad).</li>
+    <li><strong>No está jugando con varias personas</strong> mientras se acerca a mí.</li>
+    <li><strong>Tiene claridad de lo que busca</strong> en pareja y en vida.</li>
+    <li><strong>Quiere mejorar como persona</strong> activamente, no solo cuando algo le duele.</li>
+    <li><strong>Puede imaginarse un futuro conmigo</strong> sin asustarse de hablarlo.</li>
+    <li><strong>Hábitos financieros sanos</strong> — no gasta sin control, no esconde deudas, no normaliza el caos económico.</li>
+    <li><strong>No es irresponsable con el dinero</strong> — el mío, el suyo o el que se llegue a juntar.</li>
+    <li><strong>Apoya mis ideas de emprendimiento y desarrollo</strong> aunque tomen tiempo en madurar.</li>
+    <li><strong>Entiende que estoy en etapa de construcción</strong> — que hoy estudio y trabajo fuerte para sembrar futuro.</li>
+  </ol>
+
+  <h3>8. Estilo de vida (76–85)</h3>
+  <ol class="s76">
+    <li><strong>Cuida su salud</strong> — física y mental, en la medida de lo posible.</li>
+    <li><strong>Hábitos relativamente sanos</strong> — comida, sueño, actividad física.</li>
+    <li><strong>Sin vicios destructivos</strong> (adicciones serias a sustancias, juego, etc.).</li>
+    <li><strong>Le gusta aprender y es curiosa</strong> — escucha podcasts, lee, ve documentales, pregunta; se interesa por temas más allá de chismes y redes sociales.</li>
+    <li><strong>Capaz en el hogar</strong> — sabe cocinar (al menos lo básico bien hecho), cuida su espacio, no le parece humillante ni ajeno el trabajo doméstico. No busco una ama de casa de tiempo completo, pero sí a alguien que disfrute y valore construir un hogar cálido y funcional: cocinar juntos, que el espacio se sienta como casa, que los detalles del día a día sean parte de la vida compartida, no una carga delegada.</li>
+    <li><strong>Puede sostener conversaciones profundas</strong> (religión, futuro, miedos, ideas, propósito).</li>
+    <li><strong>Disfruta cosas simples</strong> — un café, una caminata, una plática larga sin destino.</li>
+    <li><strong>Le gusta salir de vez en cuando</strong>, no es ermitaña total.</li>
+    <li><strong>También disfruta planes tranquilos</strong> — quedarse en casa no le parece "perder el día".</li>
+    <li><strong>Ordenada en lo básico</strong> — su espacio refleja un mínimo de cuidado por sí misma y por los que conviven con ella.</li>
+  </ol>
+
+  <h3>9. Confianza y límites (86–93)</h3>
+  <ol class="s86">
+    <li><strong>Respeta mis límites</strong> la primera vez que los digo.</li>
+    <li><strong>Pone límites sanos con otras personas</strong> (ex, amigos invasivos, familia tóxica).</li>
+    <li><strong>No oculta cosas importantes</strong> — relaciones previas, deudas, hijos, situaciones legales.</li>
+    <li><strong>No normaliza mentiras</strong> "chiquitas" — porque las chiquitas entrenan para las grandes.</li>
+    <li><strong>Transparente con su celular y sus redes</strong> — no porque yo revise, sino porque no hay nada que esconder.</li>
+    <li><strong>No busca atención externa de forma constante</strong> — ni en redes ni en persona.</li>
+    <li><strong>No me hace sentir reemplazable</strong> ni me amenaza con que "hay muchos otros".</li>
+    <li><strong>Cuida la confianza como un activo</strong> — sabe que es lo más caro de reconstruir.</li>
+  </ol>
+
+  <h3>10. Atracción y conexión (94–100)</h3>
+  <ol class="s94">
+    <li><strong>Me gusta físicamente</strong> — atracción real, no convencerme de que "está bien".</li>
+    <li><strong>Hay química</strong> — risas fáciles, miradas, ganas de tocarla.</li>
+    <li><strong>Me gusta su forma de hablar, de moverse, de reírse</strong>.</li>
+    <li><strong>Me inspira ternura</strong> — no solo deseo.</li>
+    <li><strong>Puedo ser yo mismo con ella</strong> — silencios, frikadas, dudas, malos días.</li>
+    <li><strong>Disfrutamos el tiempo juntos</strong> sin tener que estar haciendo algo "especial".</li>
+    <li><strong>La relación se siente como equipo, no como batalla</strong> — remamos para el mismo lado.</li>
+  </ol>
+
+  <hr>
+
+  <!-- ════════════════════════════════════════
+       TOP 20
+  ════════════════════════════════════════ -->
+  <h2>20 COSAS MÁS IMPORTANTES PARA MÍ</h2>
+  <p class="nota">Filtradas según mi etapa de vida, lo que vengo cargando de relaciones pasadas y el tipo de futuro que quiero construir.</p>
+
+  <div class="top20">
+    <ol>
+      <li><strong>Honesta incluso cuando incomoda</strong> — sin esto, todo lo demás se vuelve frágil.</li>
+      <li><strong>Leal</strong> — no me expone, no juega a dos bandas, no coquetea para validarse.</li>
+      <li><strong>Buen corazón real</strong> — visible en cómo trata a quien no le puede devolver nada.</li>
+      <li><strong>Sabe comunicarse sin explotar ni desaparecer</strong>.</li>
+      <li><strong>No aplica ley del hielo</strong> — los castigos en silencio son línea roja.</li>
+      <li><strong>Emocionalmente madura</strong> — puede sostener una conversación difícil sin volverla drama.</li>
+      <li><strong>Me da paz</strong> — su presencia baja mi ansiedad, no la sube.</li>
+      <li><strong>Apoya mis proyectos</strong> de desarrollo, estudio y emprendimiento.</li>
+      <li><strong>Respeta mis tiempos</strong> de código, foco y crecimiento sin tomarlo personal.</li>
+      <li><strong>Tiene metas propias</strong> — no me usa como única razón de ser.</li>
+      <li><strong>Quiere algo serio</strong> y lo demuestra con consistencia, no solo con palabras.</li>
+      <li><strong>Sus acciones coinciden con lo que dice</strong> — no hay dos versiones.</li>
+      <li><strong>Sabe pedir perdón nombrando lo que hizo</strong>.</li>
+      <li><strong>No es manipuladora</strong> — sin culpa, ni chantaje, ni juegos mentales.</li>
+      <li><strong>Compatibilidad espiritual real</strong> — Dios como roca en su vida, visible en lo cotidiano, no solo en etiqueta o en perfil de redes.</li>
+      <li><strong>Hábitos financieros sanos</strong> — entiende y respeta el esfuerzo económico que estoy haciendo.</li>
+      <li><strong>Capaz en el hogar</strong> — valora y sabe construir un espacio cálido: cocinar, cuidar la casa, hacer del día a día algo bonito.</li>
+      <li><strong>Me motiva a ser mejor</strong> sin presionarme ni compararme.</li>
+      <li><strong>Puedo ser yo mismo con ella</strong> — bajar la guardia sin sentir que me costará caro después.</li>
+      <li><strong>Se siente como equipo</strong> — vamos para el mismo lado, no compitiendo de qué lado de la cancha.</li>
+    </ol>
+  </div>
+
+  <hr>
+
+  <!-- ════════════════════════════════════════
+       5 NO NEGOCIABLES
+  ════════════════════════════════════════ -->
+  <h2>MIS 5 NO NEGOCIABLES</h2>
+
+  <div class="non-neg">
+    <h3>1. Honestidad, lealtad y compromiso real</h3>
+    <p>Las tres van juntas porque sin honestidad la lealtad es mentira, y sin consistencia en el tiempo ambas son solo palabras. La honestidad significa decirme verdades incómodas a tiempo, no dejar que las cosas se pudran. La lealtad significa que no me expone, no juega a dos bandas, no coquetea para validarse. El compromiso real significa que no basta decir "quiero algo serio" — necesito ver que sus acciones lo sostienen: presencia, claridad, exclusividad, planes a futuro, no desaparecer, no dejarme en incertidumbre.</p>
+    <p class="como-mido"><strong>Cómo lo mido:</strong> ¿me dice verdades incómodas a tiempo?, ¿lo que cuenta de su día coincide con la realidad?, ¿habla de mí con respeto cuando no estoy?, ¿la persona del mes 1 es la misma del mes 6?, ¿avanza la relación o solo se mantiene tibia?</p>
+  </div>
+
+  <div class="non-neg">
+    <h3>2. Madurez emocional</h3>
+    <p>No necesito que nunca se enoje. Necesito que cuando se enoje no me castigue con silencio, no me ataque con cosas viejas, no me culpe de lo que siente, y pueda volver a hablar sin convertirlo en guerra fría.</p>
+    <p class="como-mido"><strong>Cómo lo mido:</strong> después de un conflicto, ¿podemos sentarnos y resolver?, ¿reconoce su parte sin victimizarse?</p>
+  </div>
+
+  <div class="non-neg">
+    <h3>3. Que me dé paz, no ansiedad constante</h3>
+    <p>Vengo de relaciones donde estaba en alerta permanente. No vuelvo a eso. Una pareja no debe sentirse como una carga mental fija.</p>
+    <p class="como-mido"><strong>Cómo lo mido:</strong> después de estar con ella, ¿me siento descansado o agotado?, ¿pienso en ella con calma o con miedo a qué viene ahora?</p>
+  </div>
+
+  <div class="non-neg">
+    <h3>4. Que apoye mi crecimiento (estudio, código, dinero, proyectos)</h3>
+    <p>Estoy en etapa de construcción fuerte. Necesito a alguien que entienda que las horas frente a la pantalla, los proyectos sin retorno inmediato y los sacrificios económicos de hoy son la base de la vida que quiero ofrecer mañana. Una pareja que ridiculice, sabotee o compita con eso no entra.</p>
+    <p class="como-mido"><strong>Cómo lo mido:</strong> ¿celebra mis avances?, ¿respeta mi foco?, ¿me empuja para arriba?</p>
+  </div>
+
+  <div class="non-neg">
+    <h3>5. Espiritualidad real, no etiqueta religiosa</h3>
+    <p>No busco a alguien que vaya a una iglesia específica ni que use el lenguaje correcto. Busco a alguien para quien Dios sea una roca real en sus decisiones — que se note en cómo perdona, en cómo trata a otros, en cómo enfrenta las crisis, en la calidad de su carácter en lo ordinario. No es la fe de los domingos ni la del perfil de redes: es la fe que te sostiene cuando nadie está mirando y cuando las cosas cuestan.</p>
+    <p class="como-mido"><strong>Cómo lo mido:</strong> ¿habla de Dios de forma natural en conversaciones cotidianas, sin impostarlo?, ¿sus decisiones reflejan principios espirituales aunque le cueste?, ¿noto a Dios en cómo es conmigo y con los demás cuando no hay audiencia?</p>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       RESUMEN
+  ════════════════════════════════════════ -->
+  <div class="summary">
+    <h2>RESUMEN FINAL</h2>
+    <p>Mis 5 no negociables son:<br><br>
+    <strong>Honestidad, lealtad y compromiso real &nbsp;·&nbsp; Madurez emocional &nbsp;·&nbsp; Paz &nbsp;·&nbsp; Apoyo a mi crecimiento &nbsp;·&nbsp; Espiritualidad real.</strong><br><br>
+    Si una persona cumple los 20 importantes pero falla en cualquiera de estos 5, no es para mí — por más que duela soltar.</p>
+  </div>
+
+</div>
+</body>
+</html>
